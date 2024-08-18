@@ -18,7 +18,7 @@ B站演示视频：https://www.bilibili.com/video/BV1PTpfeXEgc/?spm_id_from=333.
 
 eBSploit适用于内网渗透中遇到MS17-010漏洞的情况快速上线公网msf及cs，同时支持自定义dll命令执行、会话迁移等操作。
 
-当前处于测试阶段，任何问题欢迎向我发送邮件：anyiguys@qq.com 或向我提交issue
+当前处于测试阶段，任何问题欢迎向我发送邮件：anyiguys@qq.com 或向我提交issue。
 
 工具目前仅支持Windows系统。
 
