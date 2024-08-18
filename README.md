@@ -365,8 +365,3 @@ MS17-010反弹shell往往是反弹到msf的监听模块中，这里程序会根�
 
 ![image-20240817224723017](images/image-20240817224723017.png)
 
-
-
-## 演示视频
-
-<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=112978913395206&bvid=BV1PTpfeXEgc&cid=500001653076500&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
