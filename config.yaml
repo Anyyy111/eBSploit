@@ -1,0 +1,12 @@
+dll_file:
+  path: null
+exploit_host:
+  arch: null
+  ip: null
+  port: null
+local_host:
+  ip: null
+  port: null
+vps:
+  ip: null
+  port: null
